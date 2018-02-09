@@ -1,9 +1,9 @@
 <?php
-$serverName = "serverName\sqlexpress"; //serverName\instanceName
+$serverName = "DESKTOP-5OQ88VR\MSSQL2014"; //serverName\instanceName
 
 // Since UID and PWD are not specified in the $connectionInfo array,
 // The connection will be attempted using Windows Authentication.
-$connectionInfo = array( "Database"=>"dbName");
+$connectionInfo = array( "Database"=>"sports");
 $conn = sqlsrv_connect( $serverName, $connectionInfo);
 
 if( $conn ) {
