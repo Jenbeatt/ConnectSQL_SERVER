@@ -8,6 +8,6 @@ $pass = "";
 $db_name="sport"; 
 
 //connection to database
-$dbhandle = mssql_connect($server, $user, $pass) or die ("Cannot connect to Server");
+//$dbhandle = mssql_connect($server, $user, $pass) or die ("Cannot connect to Server");
 
 
