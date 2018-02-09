@@ -7,6 +7,6 @@ $server = 'DESKTOP-5OQ88VR\MSSQL2014';
 $link = mssql_connect($server);
 
 if (!$link) {
-    die('Something went wrong while connecting to MSSQL');
+    echo'Something went wrong while connecting to MSSQL';
 }
 
