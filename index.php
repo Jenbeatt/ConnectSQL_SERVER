@@ -8,36 +8,17 @@ ini_set("display_errors",1);
 ini_set("error_reporting",E_ALL);
 
 
-$conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
-
-$result = mssql_query("select * from sport", $conn);
-
-if(!$result){
-
-	var_dump(mssql_get_last_message());
-
-
-	die('MSSQL error: ' . mssql_get_last_message());
-}
-
-if($result === true){
-
-	var_dump('result', $result);
-	die;
-}
-
-
-$rows = mssql_fetch_assoc($result);
-
-if(!$rows){
-
-	die('MSSQL error: ' . mssql_get_last_message());
-
-}else{
-
-	var_dump($rows);
-}
-
+$servername = "localhost";
+$username = "root";  //your user name for php my admin if in local most probaly it will be "root"
+$password = "root";  //password probably it will be empty
+$databasename = "test"; //Your db nane
+// Create connection
+$conn = new mysqli($servername, $username, $password,$databasename);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
 
 
 
