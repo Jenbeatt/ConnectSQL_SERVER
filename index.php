@@ -13,7 +13,7 @@ $dbase="sport";
 /* Define the Connection String with an array */
 $connectionInfo = array( "Database"=>$dbase, "UID"=>$uid, "PWD"=>$pwd);
 /* Open the connection */
-//$conn = sqlsrv_connect( $serverName, $connectionInfo);
+$conn = sqlsrv_connect( $serverName, $connectionInfo);
 /* Catch and display any connection error message */
 //if( $conn === false ) {
      echo "Unable to connect.</br>";
