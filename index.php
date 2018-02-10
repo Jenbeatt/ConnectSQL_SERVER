@@ -6,14 +6,12 @@ $serverName = "DESKTOP-5OQ88VR\MSSQL2014";
 $uid = "DESKTOP-5OQ88VR\Kasco";
 $pwd = "";
 $dbase="sport"; 
-/* 
- * Establish a Connection to the SQL Server 
- */ 
 
+resource mssql_connect ([ string $serverName [, string $uid [, string $pwd [, bool $new_link = FALSE ]]]] )
 /* Define the Connection String with an array */
-$connectionInfo = array( "Database"=>$dbase, "UID"=>$uid, "PWD"=>$pwd);
+//$connectionInfo = array( "Database"=>$dbase, "UID"=>$uid, "PWD"=>$pwd);
 /* Open the connection */
-$conn = sqlsrv_connect( $serverName, $connectionInfo);
+//$conn = mssql_connect( $serverName, $connectionInfo);
 /* Catch and display any connection error message */
 //if( $conn === false ) {
      echo "Unable to connect.</br>";
