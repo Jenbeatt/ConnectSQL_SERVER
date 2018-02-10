@@ -23,7 +23,11 @@ function CloseCon($conn)
  {
  $conn -> close();
  }
-
+$conn = OpenCon();
+ 
+echo "Connected Successfully";
+ 
+CloseCon($conn);
 
 
 
