@@ -13,10 +13,13 @@ $host="localhost";
 $username="root";
 $password="";
 $dbname="dahangconner";
-$tbname="`member`";
-$connect=  mysql_connect($host,$username,$password)or die ("เชื่อมต่อฐานข้อมูลไม่ได้");
-$sqldb=mysql_select_db($dbname)or die("No Connect Data");
-mysql_db_query($dbname,"SET NAMES UTF8");
+$conn = new mysqli($host, $username, $password,$dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+
 
 
 
