@@ -7,7 +7,7 @@ ini_set('display_errors', 'On');
 ini_set("display_errors",1);
 ini_set("error_reporting",E_ALL);
 
-$conn = mssql_connect('localhost','DESKTOP-5OQ88VR\Kasco', ''); 
+$conn = mssql_connect('DESKTOP-5OQ88VR\MSSQL2014','DESKTOP-5OQ88VR\Kasco', ''); 
 
 mssql_select_db('sport', $conn);
 
