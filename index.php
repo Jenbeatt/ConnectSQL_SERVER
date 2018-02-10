@@ -7,9 +7,8 @@ ini_set('display_errors', 'On');
 ini_set("display_errors",1);
 ini_set("error_reporting",E_ALL);
 
-$conn = mssql_connect('DESKTOP-5OQ88VR\MSSQL2014','DESKTOP-5OQ88VR\Kasco', ''); 
 
-mssql_select_db('sport', $conn);
+$conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
 
 $result = mssql_query("select * from sport", $conn);
 
