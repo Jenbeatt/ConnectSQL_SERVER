@@ -8,17 +8,15 @@ ini_set("display_errors",1);
 ini_set("error_reporting",E_ALL);
 
 
-$servername = "localhost";
-$username = "root";  //your user name for php my admin if in local most probaly it will be "root"
-$password = "";  //password probably it will be empty
-$databasename = "test"; //Your db nane
-// Create connection
-$conn = new mysqli($servername, $username, $password,$databasename);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
+date_default_timezone_set("Asia/Bangkok");
+$host="localhost";
+$username="root";
+$password="";
+$dbname="dahangconner";
+$tbname="`member`";
+$connect=  mysql_connect($host,$username,$password)or die ("เชื่อมต่อฐานข้อมูลไม่ได้");
+$sqldb=mysql_select_db($dbname)or die("No Connect Data");
+mysql_db_query($dbname,"SET NAMES UTF8");
 
 
 
