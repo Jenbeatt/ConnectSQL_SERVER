@@ -9,7 +9,7 @@ ini_set("error_reporting",E_ALL);
 
 
 date_default_timezone_set("Asia/Bangkok");
-$host="localhost/phpmyadmin";
+$host="localhost";
 $username="root";
 $password="";
 $dbname="dahangconner";
