@@ -8,9 +8,9 @@ date_default_timezone_set("Asia/Bangkok");
 function OpenCon()
  {
  $dbhost = "localhost";
- $dbuser = "root";
- $dbpass = "1234";
- $db = "dahangconner";
+ $dbuser = "id4708578_test1234";
+ $dbpass = "test1234";
+ $db = "id4708578__ballbib";
 
 
  $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
